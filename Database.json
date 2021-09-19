@@ -2,65 +2,88 @@
     "name": "Contacts",
     "tables": [
         {
-            "name": "Users",
+            "name": "Contacts",
+            "hasGuid": true,
             "columns": [
                 {
-                    "name": "KeycloakGuid",
-                    "isUnique": true
-                },
-                {
-                    "name": "Email",
-                    "isNullable": true
-                },
-                {
-                    "name": "IsEmailVerified",
-                    "type": "boolean",
-                    "isNullable": true
-                },
-                {
-                    "name": "FirstName",
-                    "isNullable": true
-                },
-                {
-                    "name": "LastName",
-                    "isNullable": true
-                },
-                {
-                    "name": "ProfilePictureGuid",
-                    "isNullable": true
-                },
-                {
-                    "name": "LastSyncDate",
+                    "name": "UserGuid",
                     "isNullable": true
                 }
             ]
-        }
-    ],
-    "views": [
+        },
         {
-            "name": "UserViews",
-            "query": [
-                "select",
-                "    Id,",
-                "    KeycloakGuid as [Guid],",
-                "    Email,",
-                "    IsEmailVerified,",
-                "    FirstName,",
-                "    LastName,",
-                "    (",
-                "        case",
-                "        when FirstName is not null",
-                "        or LastName is not null",
-                "        then",
-                "            isnull(FirstName, '') + ' ' + isnull(LastName, '')",
-                "        when Email is not null",
-                "        then Email",
-                "        else",
-                "            'N/A'",
-                "        end",
-                "    ) as DisplayValue,",
-                "    LastSyncDate",
-                "from Users"
+            "name": "Addresses",
+            "hasGuid": true,
+            "columns": [
+                {
+                    "name": "ContactId"
+                },
+                {
+                    "name": "CountryGuid"
+                },
+                {
+                    "name": "ProvinceOrStateGuid",
+                    "isNullable": true
+                },
+                {
+                    "name": "CityGuid"
+                },
+                {
+                    "name": "Rest",
+                    "isNullable": true
+                },
+                {
+                    "name": "Remarks",
+                    "isNullable": true
+                }
+            ]
+        },
+        {
+            "name": "AddressLocations",
+            "oneToOneWith": "Addresses",
+            "columns": [
+                {
+                    "name": "Latitude",
+                    "type": "decimal"
+                },
+                {
+                    "name": "Longitude",
+                    "type": "decimal"
+                },
+                {
+                    "name": "Location",
+                    "type": "geography"
+                }
+            ]
+        },
+        {
+            "name": "Phones",
+            "hasGuid": true,
+            "columns": [
+                {
+                    "name": "ContactId"
+                },
+                {
+                    "name": "CountryGuid"
+                },
+                {
+                    "name": "PhoneValue"
+                }
+            ],
+            "indexes": [
+                {
+                    "columns": [
+                        "ContactId",
+                        "CountryGuid",
+                        "PhoneValue"
+                    ],
+                    "isUnique": true
+                },
+                {
+                    "columns": [
+                        "PhoneValue"
+                    ]
+                }
             ]
         }
     ]

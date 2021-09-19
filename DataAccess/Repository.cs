@@ -5,20 +5,38 @@ namespace Holism.Contacts.DataAccess
 {
     public class Repository
     {
-        public static Repository<User> User
+        public static Repository<Contact> Contact
         {
             get
             {
-                return new Holism.DataAccess.Repository<User
+                return new Holism.DataAccess.Repository<Contact
                 >(new ContactsContext());
             }
         }
 
-        public static Repository<UserView> UserView
+        public static Repository<Address> Address
         {
             get
             {
-                return new Holism.DataAccess.Repository<UserView
+                return new Holism.DataAccess.Repository<Address
+                >(new ContactsContext());
+            }
+        }
+
+        public static Repository<AddressLocation> AddressLocation
+        {
+            get
+            {
+                return new Holism.DataAccess.Repository<AddressLocation
+                >(new ContactsContext());
+            }
+        }
+
+        public static Repository<Phone> Phone
+        {
+            get
+            {
+                return new Holism.DataAccess.Repository<Phone
                 >(new ContactsContext());
             }
         }

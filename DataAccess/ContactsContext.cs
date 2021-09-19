@@ -9,9 +9,13 @@ namespace Holism.Contacts.DataAccess
     {
         public override string ConnectionStringName => "Contacts";
 
-        public DbSet<User> Users { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
 
-        public DbSet<UserView> UserViews { get; set; }
+        public DbSet<Address> Addresses { get; set; }
+
+        public DbSet<AddressLocation> AddressLocations { get; set; }
+
+        public DbSet<Phone> Phones { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
