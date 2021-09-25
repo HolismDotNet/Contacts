@@ -5,6 +5,15 @@ namespace Holism.Contacts.DataAccess
 {
     public class Repository
     {
+        public static Repository<Profile> Profile
+        {
+            get
+            {
+                return new Holism.DataAccess.Repository<Profile
+                >(new ContactsContext());
+            }
+        }
+
         public static Repository<Contact> Contact
         {
             get
