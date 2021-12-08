@@ -2,24 +2,27 @@
     "name": "Contacts",
     "tables": [
         {
-            "name": "Profiles",
-            "hasGuid": true,
-            "columns": [
-                {
-                    "name": "FirstName"
-                },
-                {
-                    "name": "LastName"
-                }
-            ]
-        },
-        {
             "name": "Contacts",
             "hasGuid": true,
             "columns": [
                 {
                     "name": "UserGuid",
                     "isNullable": true
+                }
+            ]
+        },
+        {
+            "name": "Profiles",
+            "hasGuid": true,
+            "columns": [
+                {
+                    "name": "ContactId"
+                },
+                {
+                    "name": "FirstName"
+                },
+                {
+                    "name": "LastName"
                 }
             ]
         },
