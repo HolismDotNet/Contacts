@@ -1,20 +1,17 @@
-using System;
+namespace Holism.Contacts.Models;
 
-namespace Holism.Contacts.Models
+public class Contact : IGuidEntity
 {
-    public class Contact : Holism.Models.IGuidEntity
+    public Contact()
     {
-        public Contact()
-        {
-            RelatedItems = new System.Dynamic.ExpandoObject();
-        }
-
-        public long Id { get; set; }
-
-        public Guid Guid { get; set; }
-
-        public Guid? UserGuid { get; set; }
-
-        public dynamic RelatedItems { get; set; }
+        RelatedItems = new ExpandoObject();
     }
+
+    public long Id { get; set; }
+
+    public Guid Guid { get; set; }
+
+    public Guid? UserGuid { get; set; }
+
+    public dynamic RelatedItems { get; set; }
 }
