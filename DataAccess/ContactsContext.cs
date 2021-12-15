@@ -14,6 +14,8 @@ public class ContactsContext : DatabaseContext
 
     public DbSet<Profile> Profiles { get; set; }
 
+    public DbSet<ProfileView> ProfileViews { get; set; }
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);

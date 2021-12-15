@@ -101,5 +101,23 @@
                 }
             ]
         }
+    ],
+    "views": [
+        {
+            "name": "ProfileViews",
+            "query": [
+                "select ",
+                "    Profiles.Id,",
+                "    Profiles.[Guid],",
+                "    Profiles.FirstName,",
+                "    Profiles.LastName,",
+                "    Profiles.ContactId,",
+                "    Contacts.[Guid] as ContactGuid,",
+                "    Contacts.UserGuid",
+                "from Profiles",
+                "inner join Contacts",
+                "on Profiles.Id = Contacts.Id"
+            ]
+        }
     ]
 }

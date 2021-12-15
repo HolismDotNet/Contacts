@@ -32,7 +32,9 @@ public class Repository
         {
             return new Repository<Phone>(new ContactsContext());
         }
-    }    public static Repository<Profile> Profile
+    }
+
+    public static Repository<Profile> Profile
     {
         get
         {
@@ -40,5 +42,11 @@ public class Repository
         }
     }
 
-
+    public static Repository<ProfileView> ProfileView
+    {
+        get
+        {
+            return new Repository<ProfileView>(new ContactsContext());
+        }
+    }
 }
