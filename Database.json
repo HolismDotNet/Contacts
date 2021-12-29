@@ -23,6 +23,11 @@
                 },
                 {
                     "name": "LastName"
+                },
+                {
+                    "name": "FullName",
+                    "isGenerated": true,
+                    "formula": "concat(ifnull(FirstName, ''), ' ', ifnull(LastName, ''))"
                 }
             ]
         },
@@ -106,11 +111,12 @@
         {
             "name": "ProfileViews",
             "query": [
-                "select ",
+                "select",
                 "    Profiles.Id,",
                 "    Profiles.Guid,",
                 "    Profiles.FirstName,",
                 "    Profiles.LastName,",
+                "    Profiles.FullName,",
                 "    Profiles.ContactId,",
                 "    Contacts.Guid as ContactGuid,",
                 "    Contacts.UserGuid",
