@@ -18,6 +18,10 @@ public class ContactsContext : DatabaseContext
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
+        builder.Entity<Profile>()
+            .Property(p => p.FullName)
+            .HasComputedColumnSql("concat(ifnull(FirstName, ''), ' ', ifnull(LastName, ''))");
+                    
         base.OnModelCreating(builder);
     }
 }

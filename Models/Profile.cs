@@ -17,5 +17,7 @@ public class Profile : IGuidEntity
 
     public string LastName { get; set; }
 
+    public string FullName { get; set; }
+
     public dynamic RelatedItems { get; set; }
 }
