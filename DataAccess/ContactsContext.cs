@@ -21,7 +21,6 @@ public class ContactsContext : DatabaseContext
         builder.Entity<Profile>()
             .Property(p => p.FullName)
             .HasComputedColumnSql("concat(ifnull(FirstName, ''), ' ', ifnull(LastName, ''))");
-                    
         base.OnModelCreating(builder);
     }
 }
