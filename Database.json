@@ -84,7 +84,8 @@
                     "name": "ContactId"
                 },
                 {
-                    "name": "CountryGuid"
+                    "name": "CountryGuid",
+                    "isNullable": true
                 },
                 {
                     "name": "PhoneValue"
