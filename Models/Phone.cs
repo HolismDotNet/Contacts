@@ -13,7 +13,7 @@ public class Phone : IGuidEntity
 
     public long ContactId { get; set; }
 
-    public Guid CountryGuid { get; set; }
+    public Guid? CountryGuid { get; set; }
 
     public string PhoneValue { get; set; }
 
