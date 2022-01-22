@@ -1,4 +1,4 @@
-namespace Holism.Contacts.DataAccess;
+namespace Contacts;
 
 public class ContactsContext : DatabaseContext
 {

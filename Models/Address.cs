@@ -1,4 +1,4 @@
-namespace Holism.Contacts.Models;
+namespace Contacts;
 
 public class Address : IGuidEntity
 {

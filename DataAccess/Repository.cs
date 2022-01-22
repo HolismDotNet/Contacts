@@ -1,52 +1,52 @@
-namespace Holism.Contacts.DataAccess;
+namespace Contacts;
 
 public class Repository
 {
-    public static Repository<Address> Address
+    public static Repository<Contacts.Address> Address
     {
         get
         {
-            return new Repository<Address>(new ContactsContext());
+            return new Repository<Contacts.Address>(new ContactsContext());
         }
     }
 
-    public static Repository<AddressLocation> AddressLocation
+    public static Repository<Contacts.AddressLocation> AddressLocation
     {
         get
         {
-            return new Repository<AddressLocation>(new ContactsContext());
+            return new Repository<Contacts.AddressLocation>(new ContactsContext());
         }
     }
 
-    public static Repository<Contact> Contact
+    public static Repository<Contacts.Contact> Contact
     {
         get
         {
-            return new Repository<Contact>(new ContactsContext());
+            return new Repository<Contacts.Contact>(new ContactsContext());
         }
     }
 
-    public static Repository<Phone> Phone
+    public static Repository<Contacts.Phone> Phone
     {
         get
         {
-            return new Repository<Phone>(new ContactsContext());
+            return new Repository<Contacts.Phone>(new ContactsContext());
         }
     }
 
-    public static Repository<Profile> Profile
+    public static Repository<Contacts.Profile> Profile
     {
         get
         {
-            return new Repository<Profile>(new ContactsContext());
+            return new Repository<Contacts.Profile>(new ContactsContext());
         }
     }
 
-    public static Repository<ProfileView> ProfileView
+    public static Repository<Contacts.ProfileView> ProfileView
     {
         get
         {
-            return new Repository<ProfileView>(new ContactsContext());
+            return new Repository<Contacts.ProfileView>(new ContactsContext());
         }
     }
 }
