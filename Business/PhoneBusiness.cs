@@ -1,6 +1,4 @@
-
-
-namespace Holism.Contacts.Business;
+namespace Contacts;
 
 public class PhoneBusiness : Business<Phone, Phone>
 {

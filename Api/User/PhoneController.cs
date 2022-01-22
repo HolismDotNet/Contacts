@@ -1,4 +1,4 @@
-namespace Holism.Contacts.UserApi;
+namespace Contacts;
 
 public class PhoneController : Controller<Phone, Phone>
 {
