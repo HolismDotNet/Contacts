@@ -2,9 +2,9 @@ namespace Contacts;
 
 public class ProfileBusiness : Business<ProfileView, Profile>
 {
-    protected override Repository<Profile> WriteRepository => RepositoryProfile;
+    protected override Repository<Profile> WriteRepository => Repository.Profile;
 
-    protected override ReadRepository<ProfileView> ReadRepository => RepositoryProfileView;
+    protected override ReadRepository<ProfileView> ReadRepository => Repository.ProfileView;
 
     public ProfileView Create(string firstName, string lastName)
     {
