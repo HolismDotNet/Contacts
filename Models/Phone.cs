@@ -1,6 +1,6 @@
 namespace Contacts;
 
-public class Phone : IGuidEntity
+public class Phone : IEntity, IGuid
 {
     public Phone()
     {

@@ -1,6 +1,6 @@
 namespace Contacts;
 
-public class Address : IGuidEntity
+public class Address : IEntity, IGuid
 {
     public Address()
     {

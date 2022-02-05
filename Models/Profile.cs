@@ -1,6 +1,6 @@
 namespace Contacts;
 
-public class Profile : IGuidEntity
+public class Profile : IEntity, IGuid
 {
     public Profile()
     {
