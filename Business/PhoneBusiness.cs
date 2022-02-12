@@ -2,7 +2,7 @@ namespace Contacts;
 
 public class PhoneBusiness : Business<Phone, Phone>
 {
-    protected override Repository<Phone> ReadRepository => Repository.Phone;
+    protected override Read<Phone> Read => Repository.Phone;
 
-    protected override Repository<Phone> WriteRepository => Repository.Phone;
+    protected override Write<Phone> Write => Repository.Phone;
 }

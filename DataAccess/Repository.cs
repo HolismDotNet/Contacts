@@ -2,51 +2,51 @@ namespace Contacts;
 
 public class Repository
 {
-    public static Repository<Contacts.Address> Address
+    public static Write<Contacts.Address> Address
     {
         get
         {
-            return new Repository<Contacts.Address>(new ContactsContext());
+            return new Write<Contacts.Address>(new ContactsContext());
         }
     }
 
-    public static Repository<Contacts.AddressLocation> AddressLocation
+    public static Write<Contacts.AddressLocation> AddressLocation
     {
         get
         {
-            return new Repository<Contacts.AddressLocation>(new ContactsContext());
+            return new Write<Contacts.AddressLocation>(new ContactsContext());
         }
     }
 
-    public static Repository<Contacts.Contact> Contact
+    public static Write<Contacts.Contact> Contact
     {
         get
         {
-            return new Repository<Contacts.Contact>(new ContactsContext());
+            return new Write<Contacts.Contact>(new ContactsContext());
         }
     }
 
-    public static Repository<Contacts.Phone> Phone
+    public static Write<Contacts.Phone> Phone
     {
         get
         {
-            return new Repository<Contacts.Phone>(new ContactsContext());
+            return new Write<Contacts.Phone>(new ContactsContext());
         }
     }
 
-    public static Repository<Contacts.Profile> Profile
+    public static Write<Contacts.Profile> Profile
     {
         get
         {
-            return new Repository<Contacts.Profile>(new ContactsContext());
+            return new Write<Contacts.Profile>(new ContactsContext());
         }
     }
 
-    public static Repository<Contacts.ProfileView> ProfileView
+    public static Write<Contacts.ProfileView> ProfileView
     {
         get
         {
-            return new Repository<Contacts.ProfileView>(new ContactsContext());
+            return new Write<Contacts.ProfileView>(new ContactsContext());
         }
     }
 }
