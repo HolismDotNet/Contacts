@@ -98,7 +98,7 @@
                         "CountryGuid",
                         "PhoneValue"
                     ],
-                    "isUnique": true
+                    "unique": true
                 },
                 {
                     "columns": [
