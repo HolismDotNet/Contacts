@@ -7,7 +7,7 @@
             "columns": [
                 {
                     "name": "UserGuid",
-                    "isNullable": true
+                    "nullable": true
                 }
             ]
         },
@@ -43,18 +43,18 @@
                 },
                 {
                     "name": "ProvinceOrStateGuid",
-                    "isNullable": true
+                    "nullable": true
                 },
                 {
                     "name": "CityGuid"
                 },
                 {
                     "name": "Rest",
-                    "isNullable": true
+                    "nullable": true
                 },
                 {
                     "name": "Remarks",
-                    "isNullable": true
+                    "nullable": true
                 }
             ]
         },
@@ -85,7 +85,7 @@
                 },
                 {
                     "name": "CountryGuid",
-                    "isNullable": true
+                    "nullable": true
                 },
                 {
                     "name": "PhoneValue"
